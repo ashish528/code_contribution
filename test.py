@@ -1,4 +1,4 @@
 import os
 import path
 
-testVar = "this is the test"
+testVar1 = "this is the test"
