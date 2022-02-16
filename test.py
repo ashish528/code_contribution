@@ -1,5 +1,5 @@
 import os
 import 
 
-testVar = "this is the test"
-testVar = "this is the changed text"
+testVar = "this1 is the test"
+testVar1 = "this is the changed text"
