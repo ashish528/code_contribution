@@ -15,19 +15,3 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
 </head>
-
-		body,
-	html {
-		font-family: 'Roboto', sans-serif !important;
-	}
-
-	html {
-		scroll-behavior: smooth;
-	}
-
-
-	.resumematching-head {
-		background: #f9f9f9;
-		padding: 25px;
-		padding-top: 15px;
-	}
