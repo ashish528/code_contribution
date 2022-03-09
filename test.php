@@ -15,3 +15,20 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
 </head>
+
+	<div class="main-pagedesignjdbuilder">
+
+	<body ng-app="fupApp" ng-controller="resultController" ng-init="resultData();" ng-cloak>
+		<div class="nav-bar-hono">
+			<div class="hono-logo">
+				<img src="https://devchatbot.honohr.com/profile/static/profile_img/honohr.png">
+			</div>
+			<div class="nav-details">
+				<div class="bg-gray-color">
+
+				</div>
+				<div class="bg-circle-img">
+
+				</div>
+			</div>
+		</div>
