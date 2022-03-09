@@ -32,3 +32,14 @@
 				</div>
 			</div>
 		</div>
+
+			.list .card {
+		width: 309px;
+		height: 132px;
+		margin-left: 15.5px;
+		margin-bottom: 2px;
+		padding-top: 17px;
+		border-radius: 8px;
+		transition: 0.3s;
+		cursor: pointer;
+	}
