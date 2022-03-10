@@ -17,3 +17,20 @@ def get_commit_data(request):
                 resData = reqData.json().get('files')
                 allFilesData = []
                 for singleres in resData:
+
+                                        if singleres.get('filename') in parentKeys:
+                        childfilePath = downloadFile(singleres.get('raw_url'),singleres.get('filename'),f'{userName}/{repoName}/child')
+                        parentfilePath = downloadFile(allParentPath[singleres.get('filename')],singleres.get('filename'),f'{userName}/{repoName}/parent')
+                        childCounter = 0
+                        parentCounter = 0
+                        childFile = open(childfilePath,"r")
+                        childContent = childFile.read()
+                        childCoList = childContent.split("\n")
+                        parentFile = open(parentfilePath,"r")
+                        parentContent = parentFile.read()
+                        parentCoList = parentContent.split("\n")
+                        for i in childCoList:
+                            if i:
+                                childCounter += 1
+                        for i in parentCoList:
+                            if i:
