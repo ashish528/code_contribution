@@ -34,3 +34,32 @@ def get_commit_data(request):
                                 childCounter += 1
                         for i in parentCoList:
                             if i:
+                                
+                                
+                                                            lineadded.append(singleline[1:])
+                    send_data = []
+                    if (linedeleted and lineadded):
+                        if len(linedeleted) > len(lineadded):
+                            count = len(linedeleted) - len(lineadded)
+                            for i in range(len(lineadded)):
+                                send_data.append({'line_deleted':linedeleted[i],'line_added':lineadded[i],'lineLanguage':guess.language_name(lineadded[i])})
+                            for i in linedeleted[-count:]:
+                                send_data.append({'line_deleted':i})
+                        elif len(lineadded) > len(linedeleted):
+                            count = len(lineadded) - len(linedeleted)
+                            for i in range(len(linedeleted)):
+                                send_data.append({'line_deleted':linedeleted[i],'line_added':lineadded[i],'lineLanguage':guess.language_name(lineadded[i])})
+                            for i in lineadded[-count:]:
+                                send_data.append({'line_added':i})
+                        else:
+                            for i in range(len(lineadded)):
+                                send_data.append({'line_deleted':linedeleted[i],'line_added':lineadded[i],'lineLanguage':guess.language_name(lineadded[i])})
+                    else:
+                        if linedeleted:
+                            for i in linedeleted:
+                                send_data.append({'line_deleted':i,'lineLanguage':guess.language_name(i)})
+                        elif lineadded:
+                            for i in lineadded:
+                                send_data.append({'line_added':i,'lineLanguage':guess.language_name(i)})
+                    fileExtData = '\n'.join(lineadded)
+                    codeLang = guess.language_name(fileExtData)
