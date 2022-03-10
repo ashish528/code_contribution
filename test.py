@@ -4,8 +4,8 @@ def get_commit_data(request):
         data = JSONParser().parse(request)
         if not data:
             return Response({'message':'No Data Received'}, status=status.HTTP_400_BAD_REQUEST)
-        userName = data.get('asdsadasd')
-        repoName = data.get('asdsadad')
+        userName = data.get('asda')
+        repoName = data.get('asdad')
         branchName1 = data.get('braasdasnchName')
         req = requests.get(f'https://api.github.com/repos/{userName}/{repoName}/branches/{branchName}')
         if req.status_code == 200:
